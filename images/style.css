@@ -1,5 +1,7 @@
 body {
-  color: #777;
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
 }
 body,
 .pure-g [class*="pure-u"],
@@ -375,30 +377,54 @@ a.pure-button-primary {
     padding: 1.3em;
   }
 }
-#waterfall {
-  margin-top: 30px;
+.tweet-list {
+  margin: 30px 20px;
+  overflow: hidden;
+  position: relative;
 }
-#waterfall .tweet {
-  margin: 10px;
-  padding: 5px;
-  width: 200px;
+.tweet-list .tweet {
+  position: absolute;
+  width: 202px;
+  background-color: #F7EFEF;
+  border: 1px solid #CFCECE;
+  top: 0;
+  left: 40%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
 }
-#waterfall .tweet .inner {
-  border: 1px solid;
-}
-#waterfall .tweet .inner .tweet-header {
+.tweet-list .tweet .inner .tweet-header {
   text-align: center;
   padding: 7px;
 }
-#waterfall .tweet .inner .tweet-header img {
+.tweet-list .tweet .inner .tweet-header img {
   width: 192px;
 }
-#waterfall .tweet .inner .tweet-text {
+.tweet-list .tweet .inner .tweet-text {
   padding: 5px;
 }
-#waterfall .tweet .inner .tweet-text p {
+.tweet-list .tweet .inner .tweet-text p {
   margin: 0px;
   padding: 0px;
+}
+.tweet-list .hover {
+  box-shadow: 0px 1px 8px rgba(200, 200, 200, 0.6);
+  background-color: #fff;
+  border-color: #c8c8c8;
+  opacity: 0.7;
+}
+.tweet-list .selected {
+  box-shadow: 0px 1px 8px rgba(200, 200, 200, 0.6);
+  background-color: #fff;
+  border-color: #ff0000;
+  opacity: 0.7;
+}
+.tweet-list .additem {
+  padding: 0;
+  width: 204px;
+  border: none;
 }
 #toolbar {
   text-align: right;
